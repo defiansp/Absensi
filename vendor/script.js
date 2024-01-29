@@ -284,10 +284,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-function showContent(contentNumber) {
-  var contents = document.querySelectorAll('.content');
-  for (var i = 0; i < contents.length; i++) {
-      contents[i].classList.remove('active');
-  }
-  document.getElementById('content' + contentNumber).classList.add('active');
+// function showContent(contentNumber) {
+//   var contents = document.querySelectorAll('.content');
+//   for (var i = 0; i < contents.length; i++) {
+//       contents[i].classList.remove('active');
+//   }
+//   document.getElementById('content' + contentNumber).classList.add('active');
+// }
+
+function toggleContent(buttonNumber) {
+  // Hide all content and remove active class from all buttons
+  document.querySelectorAll('.content').forEach(content => {
+      content.style.display = 'none';
+  });
+
+  document.querySelectorAll('button').forEach(button => {
+      button.classList.remove('active-button');
+  });
+
+  // Show the selected content and add active class to the clicked button
+  const contentId = 'content' + buttonNumber;
+  const activeButtonId = 'button' + buttonNumber;
+
+  document.getElementById(contentId).style.display = 'block';
+  document.getElementById(activeButtonId).classList.add('active-button');
 }

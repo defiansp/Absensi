@@ -19,23 +19,27 @@
 </head>
 
 <body>
-    <button onclick="showContent(1)">Content 1</button>
-    <button onclick="showContent(2)">Content 2</button>
-    <button onclick="showContent(3)">Content 3</button>
+    <div class="container-content">
+        <div class="container-button">
+            <button onclick="toggleContent(1)" id="button1" class="btn btn-x active-button"><span class="fa-solid fa-chart-line">&nbsp;</span> Dashboard</button>
+            <button onclick="toggleContent(2)" id="button2" class="btn btn-x"><span class="fa-solid fa-desktop">&nbsp;</span> Adjusment Manage</button>
+            <button onclick="toggleContent(3)" id="button3" class="btn btn-x"><span class="fa-solid fa-file-lines">&nbsp;</span> Rekap Absensi</button>
+        </div>
 
-    <div id="content1" class="content active">
-        <h2>Content 1</h2>
-        <p>This is content 1.</p>
-    </div>
+        <div id="content1" class="content active">
+            <h2>Content 1</h2>
+            <p>This is content 1.</p>
+        </div>
 
-    <div id="content2" class="content">
-        <h2>Content 2</h2>
-        <p>This is content 2.</p>
-    </div>
+        <div id="content2" class="content">
+            <h2>Content 2</h2>
+            <p>This is content 2.</p>
+        </div>
 
-    <div id="content3" class="content">
-        <h2>Content 3</h2>
-        <p>This is content 3.</p>
+        <div id="content3" class="content">
+            <h2>Content 3</h2>
+            <p>This is content 3.</p>
+        </div>
     </div>
 
     <!-- Bootstrap JQuery dan Javascript -->

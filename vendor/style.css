@@ -34,14 +34,10 @@ body {
 }
 
 .btn-x {
+    text-decoration: none;
     color: white;
     background: #f43a09;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.btn-x a {
-    text-decoration: none;
-    color: white;
 }
 
 .btn-x:hover {
@@ -74,4 +70,18 @@ body {
 
 .active {
     display: block;
+}
+
+.active-button {
+    background: #222222;
+}
+
+.container-content {
+    padding: 10px;
+    margin: 10px;
+    background: white;
+}
+
+.container-button {
+    margin-bottom: 20px;
 }
