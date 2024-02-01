@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Absensi</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
@@ -27,8 +27,46 @@
         </div>
 
         <div id="content1" class="content active">
-            <h2>Content 1</h2>
-            <p>This is content 1.</p>
+            
+            <div class="dropdown">
+                <p>Bulan</p>
+                <button onclick="toggleDropdown('month')" class="dropbtn">
+                    <span id="selectedMonthText">Pilih Bulan</span> 
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <div id="monthDropdown" class="dropdown-content">
+                    <input type="text" class="schdrop" placeholder="Cari bulan.." id="searchMonthInput" onkeyup="searchFunction('month')">
+                    <a href="#" onclick="selectMonth('Januari')">Januari</a>
+                    <a href="#" onclick="selectMonth('Februari')">Februari</a>
+                    <a href="#" onclick="selectMonth('Maret')">Maret</a>
+                    <a href="#" onclick="selectMonth('April')">April</a>
+                    <a href="#" onclick="selectMonth('Mei')">Mei</a>
+                    <a href="#" onclick="selectMonth('Juni')">Juni</a>
+                    <a href="#" onclick="selectMonth('Juli')">Juli</a>
+                    <a href="#" onclick="selectMonth('Agustus')">Agustus</a>
+                    <a href="#" onclick="selectMonth('September')">September</a>
+                    <a href="#" onclick="selectMonth('Oktober')">Oktober</a>
+                    <a href="#" onclick="selectMonth('November')">November</a>
+                    <a href="#" onclick="selectMonth('Desember')">Desember</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <p>Tahun</p>
+                <button onclick="toggleDropdown('year')" class="dropbtn">
+                    <span id="selectedYearText">Pilih Tahun</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <div id="yearDropdown" class="dropdown-content">
+                    <input type="text" class="schdrop" placeholder="Cari tahun.." id="searchYearInput" onkeyup="searchFunction('year')">
+                    <!-- Tambahkan tahun yang Anda butuhkan di bawah ini -->
+                    <a href="#" onclick="selectYear(2022)">2022</a>
+                    <a href="#" onclick="selectYear(2023)">2023</a>
+                    <a href="#" onclick="selectYear(2024)">2024</a>
+                    <a href="#" onclick="selectYear(2025)">2025</a>
+                    <a href="#" onclick="selectYear(2026)">2026</a>
+                </div>
+            </div>
         </div>
 
         <div id="content2" class="content">

@@ -309,3 +309,36 @@ function toggleContent(buttonNumber) {
   document.getElementById(contentId).style.display = 'block';
   document.getElementById(activeButtonId).classList.add('active-button');
 }
+
+function toggleDropdown(type) {
+  var dropdownId = type === 'month' ? 'monthDropdown' : 'yearDropdown';
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle("show");
+}
+
+function searchFunction(type) {
+  var input, filter, div, a, i;
+  var inputId = type === 'month' ? 'searchMonthInput' : 'searchYearInput';
+  input = document.getElementById(inputId);
+  filter = input.value.toUpperCase();
+  var dropdownId = type === 'month' ? 'monthDropdown' : 'yearDropdown';
+  div = document.getElementById(dropdownId);
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+      if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+      } else {
+          a[i].style.display = "none";
+      }
+  }
+}
+
+function selectMonth(month) {
+  document.getElementById("selectedMonthText").innerHTML = month;
+  toggleDropdown('month'); // Tutup dropdown setelah memilih bulan
+}
+
+function selectYear(year) {
+  document.getElementById("selectedYearText").innerHTML = year;
+  toggleDropdown('year'); // Tutup dropdown setelah memilih tahun
+}
